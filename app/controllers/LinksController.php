@@ -1,6 +1,7 @@
 <?php
 
 use Way\Validators\ValidationException;
+use Way\Exceptions\NonExistentHashException;
 
 class LinksController extends BaseController {
 
@@ -55,7 +56,7 @@ class LinksController extends BaseController {
 
         catch (NonExistentHashException $e)
         {
-            return Redirect::home()->with('flash_message', 'No url found');
+            return Redirect::home()->with('flash_message', 'Sorry - could not find your desired URL.');
         }
     }
 
