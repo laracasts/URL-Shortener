@@ -1,0 +1,22 @@
+h1 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+output { text-align: center; }
+
+.put-the-dang-thing-in-the-middle {
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+#shorten-input {
+    width: 80%;
+    height: 70px;
+    margin: auto;
+    color: #999;
+    font-size: 1.9em;
+}
