@@ -1,6 +1,7 @@
 h1 {
     text-align: center;
     margin-bottom: 1em;
+    font-family: Open Sans;
 }
 
 output { text-align: center; }
@@ -19,4 +20,11 @@ output { text-align: center; }
     margin: auto;
     color: #999;
     font-size: 1.9em;
+}
+
+.error {
+    color: red;
+    font-style: italic;
+    text-align: center;
+    margin-top: 1em;
 }

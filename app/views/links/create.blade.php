@@ -7,7 +7,7 @@
     {{ Form::open(['url' => 'links']) }}
         <div class="form-group">
             {{ Form::text('url', null, ['class' => 'form-control', 'id' => 'shorten-input', 'placeholder' => 'https://laracasts.com']) }}
-            {{ $errors->first('url', '<span class="error">:message</span>') }}
+            {{ $errors->first('url', '<div class="error">:message</div>') }}
         </div>
     {{ Form::close() }}
 
