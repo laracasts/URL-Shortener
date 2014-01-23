@@ -16,6 +16,8 @@ class ValidationException extends \Exception {
     }
 
     /**
+     * Fetch validation errors
+     * 
      * @return string
      */
     public function getErrors()

@@ -55,7 +55,7 @@ class LittleService {
     }
 
     /**
-     * Fetch a url by has
+     * Fetch a url by hash
      *
      * @param $hash
      *

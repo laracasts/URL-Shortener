@@ -5,6 +5,8 @@ use Way\Link;
 class DbLinkRepository implements LinkRepositoryInterface {
 
     /**
+     * Create new link in db
+     *
      * @param array $data
      *
      * @return mixed
@@ -15,6 +17,8 @@ class DbLinkRepository implements LinkRepositoryInterface {
     }
 
     /**
+     * Fetch link by hash
+     *
      * @param $hash
      *
      * @return mixed
@@ -25,6 +29,8 @@ class DbLinkRepository implements LinkRepositoryInterface {
     }
 
     /**
+     * Fetch link by url
+     *
      * @param $url
      *
      * @return mixed
