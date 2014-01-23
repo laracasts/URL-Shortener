@@ -33,7 +33,7 @@ class LinksController extends BaseController {
         }
 
         return Redirect::home()->with([
-            'flash_message' => 'All Done',
+            'flash_message' => 'Here you go! ' . link_to($hash),
             'hashed'        => $hash
         ]);
     }
