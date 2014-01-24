@@ -1,4 +1,4 @@
-<?php namespace Way\Shortener;
+<?php namespace Way\Shortener\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

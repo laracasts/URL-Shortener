@@ -175,7 +175,7 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
         'View'            => 'Illuminate\Support\Facades\View',
-        'Little'         => 'Way\Shortener\Little'
+        'Little'         => 'Way\Shortener\Facades\Little'
 
 	),
 
