@@ -35,23 +35,9 @@ class LittleService {
      */
     public function make($url)
     {
-        // does this url already exist?
         $link = $this->linkRepo->byUrl($url);
 
-        // If so, return the hash
-        if ($link) return $link->hash;
-
-        // Otherwise, let's prepare one
-        $hash = $this->urlHasher->make($url);
-
-        $data = compact('url', 'hash');
-
-        // make an announcement
-        \Event::fire('link.creating', [$data]);
-
-        $this->linkRepo->create($data);
-
-        return $hash;
+        return $link ? $link->hash : $this->makeHash($url);
     }
 
     /**
@@ -69,5 +55,23 @@ class LittleService {
         if ( ! $link) throw new NonExistentHashException;
 
         return $link->url;
+    }
+
+    /**
+     * Prepare and save new url + hash
+     *
+     * @param $url
+     * @returns string
+     */
+    private function makeHash($url)
+    {
+        $hash = $this->urlHasher->make($url);
+        $data = compact('url', 'hash');
+
+        \Event::fire('link.creating', [$data]);
+
+        $this->linkRepo->create($data);
+
+        return $hash;
     }
 }
