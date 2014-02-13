@@ -16,4 +16,11 @@ interface LinkRepositoryInterface {
      */
     public function byHash($hash);
 
+    /**
+     * Fetch link by url
+     *
+     * @param  $url
+     */
+    public function byUrl($url);
+
 }
