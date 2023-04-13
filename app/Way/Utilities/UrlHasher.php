@@ -26,7 +26,7 @@ class UrlHasher {
     {
         $pool = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-        return substr(str_shuffle(str_repeat($pool, 5)), 0, $this->hashLength);
+        return substr(str_shuffle(str_repeat($pool, 5)) . time(), 0, $this->hashLength);
     }
 
 }
